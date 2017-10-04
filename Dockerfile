@@ -5,11 +5,11 @@ MAINTAINER Tim Dudgeon <tdudgeon@informaticsmatters.com>
 # Defines environment variables
 ENV HOME /root
 ENV DEBIAN_FRONTEND noninteractive
-ENV GROOVY_VERSION 2.4.7
+ENV GROOVY_VERSION 2.4.12
 
 # Installs curl and GVM
 RUN apt-get update && \
-    apt-get install -y curl unzip && \
+    apt-get install -y curl zip unzip && \
     curl -s "https://get.sdkman.io" | bash && \
     apt-get autoremove -y && \
     apt-get clean
